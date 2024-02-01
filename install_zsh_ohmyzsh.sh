@@ -12,7 +12,7 @@
 sudo apt-get update
 sudo apt-get install -y zsh
 # To Work zsh-auto-notify
-sudo apt-get install libnotify-bin
+sudo apt-get install -y libnotify-bin
 
 # Create directory for saving history commands
 ZSH_CACHE_DIR=~/.cache/zsh
@@ -29,15 +29,16 @@ fi
 echo "Zsh cache and history file have been set up."
 
 echo "Changing the default shell to Zsh"
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh) $USER
+exec zsh
 
 echo "Installing OhMyZsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-CUSTOM_ZSHRC_URL="https://raw.githubusercontent.com/OmgAvy/Linux/main/.zshrc"
+# CUSTOM_ZSHRC_URL="https://raw.githubusercontent.com/OmgAvy/Linux/main/.zshrc"
 
-echo "Downloading custom .zshrc file"
-curl -fsSL "$CUSTOM_ZSHRC_URL" -o ~/.zshrc
+# echo "Downloading custom .zshrc file"
+# curl -fsSL "$CUSTOM_ZSHRC_URL" -o ~/.zshrc
 
 echo "Installing additional plugins"
 # zsh-autocomplete
@@ -75,5 +76,8 @@ curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.aliases" -o ~/.aliase
 
 # Source the Zsh configuration to apply changes
 source ~/.zshrc
+rm ~/.zshrc 
+curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.zshrc" -o ~/.zshrc
+
 
 echo "Zsh and Oh My Zsh have been successfully installed."
