@@ -28,7 +28,8 @@ if [ ! -f "$ZSH_HISTORY_FILE" ]; then
 fi
 echo "Zsh cache and history file have been set up."
 
-
+echo "Changing the default shell to Zsh"
+chsh -s $(which zsh)
 
 echo "Installing OhMyZsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -51,6 +52,7 @@ git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting || true
 # history-substring-search
 git clone --depth 1 https://github.com/zsh-users/zsh-history-substring-search.git $ZSH_CUSTOM/plugins/history-substring-search || true
+
 
 echo "Downloading .aliases file"
 curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.aliases" -o ~/.aliases
@@ -75,6 +77,3 @@ curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.aliases" -o ~/.aliase
 source ~/.zshrc
 
 echo "Zsh and Oh My Zsh have been successfully installed."
-
-echo "Changing the default shell to Zsh"
-chsh -s $(which zsh)
