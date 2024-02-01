@@ -28,8 +28,7 @@ if [ ! -f "$ZSH_HISTORY_FILE" ]; then
 fi
 echo "Zsh cache and history file have been set up."
 
-echo "Changing the default shell to Zsh"
-chsh -s $(which zsh)
+
 
 echo "Installing OhMyZsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -76,3 +75,6 @@ curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.aliases" -o ~/.aliase
 source ~/.zshrc
 
 echo "Zsh and Oh My Zsh have been successfully installed."
+
+echo "Changing the default shell to Zsh"
+chsh -s $(which zsh)
