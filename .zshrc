@@ -99,12 +99,12 @@ plugins=(
 	npm
 	sudo
 	history
+	auto-notify
 	# zsh-autocomplete
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	history-substring-search
 	zsh-you-should-use
-	zsh-auto-notify
 )
 
 source $ZSH/oh-my-zsh.sh
