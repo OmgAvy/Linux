@@ -108,8 +108,6 @@ plugins=(
 	zsh-you-should-use
 )
 
-source $ZSH/oh-my-zsh.sh
-
 # Keybindings for zsh-history-substring-search
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
