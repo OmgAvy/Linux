@@ -44,7 +44,7 @@ git clone --depth 1 https://github.com/MichaelAquilina/zsh-you-should-use.git $Z
 
 # zsh-auto-notify
 # To Work zsh-auto-notify
-sudo apt-get install -y libnotify-bin
+sudo apt-get install -y libnotify-bin && echo "Success" || echo "Failed to Install!"
 rm -rf $ZSH_CUSTOM/plugins/auto-notify
 git clone --depth 1 https://github.com/MichaelAquilina/zsh-auto-notify.git $ZSH_CUSTOM/plugins/auto-notify || true
 
