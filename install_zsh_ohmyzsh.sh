@@ -30,15 +30,9 @@ echo "Zsh cache and history file have been set up."
 
 echo "Changing the default shell to Zsh"
 sudo chsh -s $(which zsh) $USER
-exec zsh
 
 echo "Installing OhMyZsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# CUSTOM_ZSHRC_URL="https://raw.githubusercontent.com/OmgAvy/Linux/main/.zshrc"
-
-# echo "Downloading custom .zshrc file"
-# curl -fsSL "$CUSTOM_ZSHRC_URL" -o ~/.zshrc
 
 echo "Installing additional plugins"
 # zsh-autocomplete
