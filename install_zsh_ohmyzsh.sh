@@ -17,7 +17,11 @@ sudo chsh -s $(which zsh) $USER
 
 echo "Installing OhMyZsh"
 rm -rf ~/.oh-my-zsh/
+echo "removed OhMyZsh"
+
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "downlloaeded OhMyZsh"
 
 # Source the Zsh configuration to apply changes
 source ~/.zshrc
