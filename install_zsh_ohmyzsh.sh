@@ -30,6 +30,7 @@ echo "Zsh cache and history file have been set up."
 
 echo "Changing the default shell to Zsh"
 sudo chsh -s $(which zsh) $USER
+exec zsh
 
 echo "Installing OhMyZsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -40,7 +41,7 @@ rm -rf $ZSH_CUSTOM/plugins/zsh-autocomplete
 git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete || true
 
 # zsh-you-should-use
-rm -rf $ZSH_CUSTOM/plugins/zsh-you-should
+rm -rf $ZSH_CUSTOM/plugins/zsh-you-should-use
 git clone --depth 1 https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/zsh-you-should-use || true
 
 # zsh-auto-notify
@@ -83,7 +84,7 @@ curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.aliases" -o ~/.aliase
 rm ~/.zshrc 
 rm ~/.zsh_history
 
-curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.zshrc" -o ~/.zshrc
+# curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.zshrc" -o ~/.zshrc
 source ~/.zshrc
 
 echo "Zsh and Oh My Zsh have been successfully installed."
