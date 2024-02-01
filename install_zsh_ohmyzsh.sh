@@ -80,9 +80,10 @@ curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.aliases" -o ~/.aliase
 # echo "plugins=(${plugins[@]})" >> ~/.zshrc
 
 # Source the Zsh configuration to apply changes
-source ~/.zshrc
 rm ~/.zshrc 
-curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.zshrc" -o ~/.zshrc
+rm ~/.zsh_history
 
+curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.zshrc" -o ~/.zshrc
+source ~/.zshrc
 
 echo "Zsh and Oh My Zsh have been successfully installed."
