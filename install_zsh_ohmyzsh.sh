@@ -30,6 +30,7 @@ echo "Zsh cache and history file have been set up."
 
 echo "Changing the default shell to Zsh"
 sudo chsh -s $(which zsh) $USER
+exec zsh 
 
 echo "Installing OhMyZsh"
 rm -rf ~/.oh-my-zsh/
