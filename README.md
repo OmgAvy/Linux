@@ -8,7 +8,7 @@ For the most straightforward installation, copy and paste the following commands
 ```bash
 bash -c $(wget -O- https://raw.githubusercontent.com/OmgAvy/Linux/main/install_zsh_ohmyzsh.sh)
 ```
-For curl user, use the command '''curl -fsSL'''. 
+For those using 'curl' package, use the command '''curl -fsSL'''. 
 For additional plugins, use the following:
 
 ```zsh
