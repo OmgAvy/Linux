@@ -78,7 +78,6 @@ git clone --depth 1 https://github.com/zsh-users/zsh-history-substring-search.gi
 
 file_to_remove=~/.zsh_history
 if [ -f "$file_to_remove" ]; then
-    # Remove the file
     rm -f "$file_to_remove"
     echo ".zsh_history removed successfully."
 else
@@ -91,5 +90,5 @@ curl "https://raw.githubusercontent.com/OmgAvy/Linux/main/.zshrc" -o ~/.zshrc
 # echo "Applying changes to zsh configuration"
 # source ~/.zshrc
 
-echo "Plugins have been successfully installed."
+echo "Please restart terminal, Plugins have been successfully installed."
 
