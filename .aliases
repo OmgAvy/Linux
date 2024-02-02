@@ -67,6 +67,7 @@ alias lh='ls -lhaG --color=always'
 alias ll='ls -lAh --color=always'  # Detailed list view, including hidden files
 alias la='ls -AFh --color=always'  # All files, including hidden, with indicators
 alias l='ls -Fh --color=always'  # Basic file list with indicators
+alias ls='ls --color=always'
 
 #-------------------------------- MY Aliases --------------------------------#
 # refresh shell
@@ -90,4 +91,5 @@ sss(){
     b=$(adb connect 192.168.1.102:5555);notify-send "$b (Redmi)"
 }
 
-
+# neovim 
+alias nv='.nvim/bin/nvim'
