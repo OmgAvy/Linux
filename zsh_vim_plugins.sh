@@ -8,14 +8,16 @@
 #               /____/         #
 #------------------------------#
 
-# Update package lists and install Zsh if not already installed
-pkg update
-pkg install -y zsh
+# Update package lists and install Zsh
+sudo apt update
+sudo apt install -y zsh
 
-# Check if zsh is already the default shell
+# Set Zsh as the default shell
 if ! grep -Fxq "exec zsh" ~/.bashrc; then
-    echo "Changing the default shell to Zsh (Termux doesn't support chsh)"
+    echo "Changing the default shell to Zsh"
     echo "exec zsh" >> ~/.bashrc
+    # Or use 'chsh -s $(which zsh)' to set it as default permanently
+    chsh -s $(which zsh)
 fi
 
 echo "Installing Oh My Zsh"
