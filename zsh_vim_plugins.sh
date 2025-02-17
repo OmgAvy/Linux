@@ -65,6 +65,9 @@ git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZS
 # history-substring-search
 git clone --depth 1 https://github.com/zsh-users/zsh-history-substring-search.git $ZSH_CUSTOM/plugins/history-substring-search || true
 
+# auto-notify
+git clone --depth 1 https://github.com/MichaelAquilina/zsh-auto-notify.git $ZSH_CUSTOM/plugins/auto-notify || true
+
 # Remove old Zsh history file if it exists
 file_to_remove=~/.zsh_history
 if [ -f "$file_to_remove" ]; then
