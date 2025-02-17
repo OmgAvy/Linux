@@ -2,6 +2,11 @@
 For Personal Use Only
 
 ## Installing Zsh and OhMyZsh on Ubuntu
+### Install zsh, ohmyzh, vim and their plugins 
+```bash
+wget -qO- https://raw.githubusercontent.com/OmgAvy/Linux/main/zsh_vim_plugins.sh | bash
+```
+
 
 ### **Method 1**: Direct Paste on the Terminal
 For the most straightforward installation, copy and paste the following commands directly into your terminal:
