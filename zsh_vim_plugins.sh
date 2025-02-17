@@ -10,7 +10,7 @@
 
 # Update package lists and install Zsh
 sudo apt update
-sudo apt install -y zsh
+sudo apt install -y zsh vim wget
 
 # Set Zsh as the default shell
 if ! grep -Fxq "exec zsh" ~/.bashrc; then
@@ -75,8 +75,8 @@ else
 fi
 
 echo "Installing custom vim files"
-git clone --depth 1 https://github.com/OmgAvy/Termux.git && \
-[ -d "$HOME/Termux/.vim" ] && mv $HOME/Termux/.vim ~/ && rm -rf $HOME/Termux || echo "Error: .vim not found!"
+git clone --depth 1 https://github.com/OmgAvy/Linux.git && \
+[ -d "$HOME/Linux/.vim" ] && mv $HOME/Linux/.vim ~/ && rm -rf $HOME/Linux || echo "Error: .vim not found!"
 
 echo "Starting zsh shell ..."
 exec zsh
